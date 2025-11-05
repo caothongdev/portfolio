@@ -118,7 +118,7 @@ npm run typecheck    # Kiểm tra TypeScript
 ## 📞 Liên hệ
 
 - **Email**: [caothongdev@gmail.com](mailto:caothongdev@gmail.com)
-- **GitHub**: [github.com/caothong](https://github.com/caothong)
+- **GitHub**: [github.com/caothong](https://github.com/caothongdev)
 - **LinkedIn**: [linkedin.com/in/caothongdev](https://www.linkedin.com/in/caothongdev)
 - **YouTube**: [youtube.com/@caothongdev](https://youtube.com/@caothongdev)
 - **Website**: [caothong.is-a.dev](https://caothong.is-a.dev)
