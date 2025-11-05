@@ -4,5 +4,9 @@ User-agent: *
 # Allow everything else
 Allow: /
 
+# Disallow admin area
+Disallow: /admin/
+Disallow: /api/
+
 # Sitemap
-Sitemap: https://utkarsh-singhal.tech/sitemap.xml
+Sitemap: https://caothong.is-a.dev/sitemap.xml

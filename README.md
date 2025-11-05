@@ -39,7 +39,7 @@ Tôi là **Hoàng Cao Thống**, 16 tuổi, đến từ Hậu Giang & Cần Thơ
 1. Clone repository:
 
    ```bash
-   git clone https://github.com/caothong/portfolio.git
+   git clone https://github.com/caothongdev/portfolio.git
    cd portfolio
    ```
 

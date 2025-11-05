@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Outfit } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -12,9 +13,15 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Hoàng Cao Thống - Portfolio",
+  metadataBase: new URL('https://caothong.is-a.dev'),
+  title: {
+    default: "Hoàng Cao Thống - Portfolio",
+    template: "%s | Hoàng Cao Thống"
+  },
   description:
     "Lập trình viên trẻ với tham vọng xây dựng thương hiệu cá nhân và tự do tài chính.",
+  applicationName: "Hoàng Cao Thống Portfolio",
+  manifest: "/manifest.json",
   openGraph: {
     title: "Hoàng Cao Thống | Website Developer",
     description:
@@ -72,6 +79,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster position="top-right" richColors closeButton />
         </ThemeProvider>
 
         <Analytics />

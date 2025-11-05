@@ -44,6 +44,9 @@ export function Navbar() {
               <AnimatedText href={`/#${link}`}>{link}</AnimatedText>
             </li>
           ))}
+          <li>
+            <AnimatedText href="/admin">admin</AnimatedText>
+          </li>
         </ul>
 
         {isMounted && (

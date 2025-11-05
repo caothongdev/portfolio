@@ -5,6 +5,8 @@ interface IBlogData {
   TIME: string;
   LINK: string;
   DESCRIPTION: string;
+  IMAGE?: string;
+  IMAGE_ALT?: string;
 }
 
 export function Blogs({ data }: { data: Record<string, IBlogData> }) {
@@ -18,30 +20,48 @@ export function Blogs({ data }: { data: Record<string, IBlogData> }) {
         {Object.entries(data).map(([key, value]) => (
           <li key={key} className="cursor-target">
             <div className="pl-4 border-muted-foreground hover:border-primary border-l size-full transition-all duration-300">
-              <p className="text-primary/90 text-lg">
-                {key}{" "}
-                <span className="inline-block bg-secondary max-sm:mb-2 ml-2 px-2 py-1 rounded text-xs">
-                  {value.DATE}
-                </span>
-              </p>
+              <div className="flex gap-4 items-start">
+                {/* Cover Image */}
+                {value.IMAGE && (
+                  <div className="flex-shrink-0">
+                    <img
+                      src={value.IMAGE}
+                      alt={value.IMAGE_ALT || key}
+                      className="w-16 h-16 sm:w-20 sm:h-20 object-cover rounded-lg border"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  </div>
+                )}
+                
+                <div className="flex-1">
+                  <p className="text-primary/90 text-lg">
+                    {key}{" "}
+                    <span className="inline-block bg-secondary max-sm:mb-2 ml-2 px-2 py-1 rounded text-xs">
+                      {value.DATE}
+                    </span>
+                  </p>
 
-              <p className="flex items-center gap-1 text-sm">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1"
-                  href={value.LINK}
-                >
-                  Read more <ArrowUpRight size={18} />
-                </a>
-                <span className="px-1 py-px text-xs">
-                  {value.TIME} min read
-                </span>
-              </p>
+                  <p className="flex items-center gap-1 text-sm">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1"
+                      href={value.LINK}
+                    >
+                      Read more <ArrowUpRight size={18} />
+                    </a>
+                    <span className="px-1 py-px text-xs">
+                      {value.TIME} min read
+                    </span>
+                  </p>
 
-              <p className="mt-1 text-muted-foreground text-sm text-justify line-clamp-3">
-                {value.DESCRIPTION}
-              </p>
+                  <p className="mt-1 text-muted-foreground text-sm text-justify line-clamp-3">
+                    {value.DESCRIPTION}
+                  </p>
+                </div>
+              </div>
             </div>
           </li>
         ))}
