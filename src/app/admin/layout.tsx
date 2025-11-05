@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { LogOut, Settings, FileText, Home } from "lucide-react";
 import Link from "next/link";
@@ -15,15 +15,22 @@ export default function AdminLayout({
 }) {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
-    // Check authentication
+    // Skip auth check for login page
+    if (pathname === "/admin/login") {
+      setLoading(false);
+      return;
+    }
+
+    // Check authentication for other pages
     if (!isAuthenticated()) {
       router.push("/admin/login");
     } else {
       setLoading(false);
     }
-  }, [router]);
+  }, [router, pathname]);
 
   const handleLogout = () => {
     logActivity.adminLogout();
@@ -40,6 +47,11 @@ export default function AdminLayout({
         </div>
       </div>
     );
+  }
+
+  // Render login page without admin layout
+  if (pathname === "/admin/login") {
+    return <>{children}</>;
   }
 
   return (
