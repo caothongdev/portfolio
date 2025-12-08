@@ -135,6 +135,7 @@ export default function NewBookPage() {
               <ImageUpload
                 value={formData.cover_image}
                 onChange={(url) => setFormData({ ...formData, cover_image: url })}
+                onRemove={() => setFormData({ ...formData, cover_image: '' })}
               />
             </div>
 
