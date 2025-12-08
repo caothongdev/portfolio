@@ -177,8 +177,8 @@ export default function BooksManagement() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <SearchBar
-                value={searchQuery}
-                onChange={setSearchQuery}
+                onSearch={setSearchQuery}
+                defaultValue={searchQuery}
                 placeholder="Tìm kiếm theo tên sách, tác giả..."
               />
             </div>
