@@ -1,11 +1,24 @@
 import { Resend } from 'resend';
 import { ContactInput } from './validations';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Lazy initialization - only create client when actually needed (runtime)
+let resend: Resend | null = null;
+
+function getResendClient(): Resend {
+  if (!resend) {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      throw new Error('RESEND_API_KEY is not configured');
+    }
+    resend = new Resend(apiKey);
+  }
+  return resend;
+}
 
 export async function sendContactEmail(data: ContactInput) {
   try {
-    const { data: emailData, error } = await resend.emails.send({
+    const client = getResendClient();
+    const { data: emailData, error } = await client.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>',
       to: process.env.CONTACT_EMAIL || 'caothongdev@gmail.com',
       subject: `New Contact Form: ${data.subject}`,
@@ -42,7 +55,8 @@ export async function sendContactEmail(data: ContactInput) {
 
 export async function sendWelcomeEmail(email: string, name: string) {
   try {
-    const { data, error } = await resend.emails.send({
+    const client = getResendClient();
+    const { data, error } = await client.emails.send({
       from: 'Portfolio <onboarding@resend.dev>',
       to: email,
       subject: 'Welcome to Hoang Cao Thong Portfolio',
