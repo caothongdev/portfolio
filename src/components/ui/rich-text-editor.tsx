@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { ImageUpload } from "@/components/ui/image-upload";
+import DOMPurify from 'dompurify';
 import { 
   Bold, 
   Italic, 
@@ -111,6 +112,18 @@ export function RichTextEditor({ value, onChange, placeholder = "Viết nội du
       .replace(/$/, '</p>');
   };
 
+  // Sanitize HTML to prevent XSS attacks
+  const sanitizedHtml = useMemo(() => {
+    const html = markdownToHtml(value);
+    if (typeof window !== 'undefined') {
+      return DOMPurify.sanitize(html, {
+        ALLOWED_TAGS: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'br', 'strong', 'em', 'u', 'a', 'img', 'ul', 'ol', 'li', 'blockquote', 'code', 'pre'],
+        ALLOWED_ATTR: ['href', 'src', 'alt', 'class', 'target', 'rel'],
+      });
+    }
+    return html;
+  }, [value]);
+
   const toolbarButtons = [
     { icon: Bold, action: () => wrapSelection('**', '**'), title: 'Bold' },
     { icon: Italic, action: () => wrapSelection('*', '*'), title: 'Italic' },
@@ -161,7 +174,7 @@ export function RichTextEditor({ value, onChange, placeholder = "Viết nội du
         {showPreview ? (
           <div 
             className="p-4 min-h-[300px] prose prose-sm max-w-none"
-            dangerouslySetInnerHTML={{ __html: markdownToHtml(value) }}
+            dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
           />
         ) : (
           <textarea

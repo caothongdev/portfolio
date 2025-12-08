@@ -30,7 +30,7 @@ export default function AdminDashboard() {
       <div>
         <h1 className="text-3xl font-bold">Dashboard</h1>
         <p className="text-muted-foreground">
-          Chào mừng đến với trang quản trị portfolio của Hoàng Cao Thống
+          Welcome to Hoang Cao Thong's portfolio admin panel
         </p>
       </div>
 
@@ -38,13 +38,13 @@ export default function AdminDashboard() {
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Tổng Blog</CardTitle>
+            <CardTitle className="text-sm font-medium">Total Blogs</CardTitle>
             <FileText className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{totalBlogs}</div>
             <p className="text-xs text-muted-foreground">
-              +2 từ tháng trước
+              +2 from last month
             </p>
           </CardContent>
         </Card>
@@ -57,20 +57,20 @@ export default function AdminDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">3</div>
             <p className="text-xs text-muted-foreground">
-              Đang hoạt động
+              Active
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">Lượt xem</CardTitle>
+            <CardTitle className="text-sm font-medium">Views</CardTitle>
             <Users className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{totalViews.toLocaleString()}</div>
             <p className="text-xs text-muted-foreground">
-              +20% từ tuần trước
+              +20% from last week
             </p>
           </CardContent>
         </Card>
@@ -83,7 +83,7 @@ export default function AdminDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">7</div>
             <p className="text-xs text-muted-foreground">
-              Platforms kết nối
+              Connected platforms
             </p>
           </CardContent>
         </Card>
@@ -92,23 +92,23 @@ export default function AdminDashboard() {
       {/* Quick Actions */}
       <Card>
         <CardHeader>
-          <CardTitle>Thao tác nhanh</CardTitle>
+          <CardTitle>Quick Actions</CardTitle>
           <CardDescription>
-            Các chức năng thường dùng
+            Frequently used functions
           </CardDescription>
         </CardHeader>
         <CardContent className="flex gap-4">
           <Link href="/admin/blogs/new">
             <Button>
               <FileText className="w-4 h-4 mr-2" />
-              Tạo blog mới
+              Create new blog
             </Button>
           </Link>
           
           <Link href="/admin/blogs">
             <Button variant="outline">
               <Settings className="w-4 h-4 mr-2" />
-              Quản lý blog
+              Manage blogs
             </Button>
           </Link>
         </CardContent>

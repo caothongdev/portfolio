@@ -43,7 +43,7 @@ export default function AdminLayout({
       <div className="min-h-screen flex items-center justify-center bg-background">
         <div className="text-center">
           <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-muted-foreground">Đang kiểm tra quyền truy cập...</p>
+          <p className="text-muted-foreground">Checking access permissions...</p>
         </div>
       </div>
     );
@@ -65,13 +65,13 @@ export default function AdminLayout({
             <Link href="/">
               <Button variant="ghost" size="sm">
                 <Home className="w-4 h-4 mr-2" />
-                Trang chủ
+                Home
               </Button>
             </Link>
             
             <Button variant="ghost" size="sm" onClick={handleLogout}>
               <LogOut className="w-4 h-4 mr-2" />
-              Đăng xuất
+              Logout
             </Button>
           </div>
         </div>
@@ -92,14 +92,14 @@ export default function AdminLayout({
             <Link href="/admin/blogs">
               <Button variant="ghost" className="w-full justify-start">
                 <FileText className="w-4 h-4 mr-2" />
-                Quản lý Blog
+                Manage Blogs
               </Button>
             </Link>
 
             <Link href="/admin/settings">
               <Button variant="ghost" className="w-full justify-start">
                 <Settings className="w-4 h-4 mr-2" />
-                Cài đặt
+                Settings
               </Button>
             </Link>
           </div>

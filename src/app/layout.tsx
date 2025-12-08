@@ -15,17 +15,17 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   metadataBase: new URL('https://caothong.is-a.dev'),
   title: {
-    default: "Hoàng Cao Thống - Portfolio",
-    template: "%s | Hoàng Cao Thống"
+    default: "Hoang Cao Thong - Portfolio",
+    template: "%s | Hoang Cao Thong"
   },
   description:
-    "Lập trình viên trẻ với tham vọng xây dựng thương hiệu cá nhân và tự do tài chính.",
-  applicationName: "Hoàng Cao Thống Portfolio",
+    "Young developer with ambitions to build a personal brand and achieve financial freedom.",
+  applicationName: "Hoang Cao Thong Portfolio",
   manifest: "/manifest.json",
   openGraph: {
-    title: "Hoàng Cao Thống | Website Developer",
+    title: "Hoang Cao Thong | Website Developer",
     description:
-      "Lập trình viên trẻ với tham vọng xây dựng thương hiệu cá nhân và tự do tài chính.",
+      "Young developer with ambitions to build a personal brand and achieve financial freedom.",
     url: "https://caothong.is-a.dev/",
     type: "website",
     images: [
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: "https://caothong.is-a.dev/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Hoàng Cao Thống | Website Developer",
+        alt: "Hoang Cao Thong | Website Developer",
       },
     ],
   },
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   authors: [
-    { name: "Hoàng Cao Thống", url: "https://caothong.is-a.dev/" },
+    { name: "Hoang Cao Thong", url: "https://caothong.is-a.dev/" },
   ],
   keywords: [
-    "Hoàng Cao Thống",
+    "Hoang Cao Thong",
     "Software Developer",
     "Full-Stack Developer",
     "React",
@@ -58,8 +58,8 @@ export const metadata: Metadata = {
     "Tailwind CSS",
     "Web Development",
   ],
-  creator: "Hoàng Cao Thống",
-  publisher: "Hoàng Cao Thống",
+  creator: "Hoang Cao Thong",
+  publisher: "Hoang Cao Thong",
 };
 
 export default function RootLayout({

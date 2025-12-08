@@ -14,16 +14,17 @@ export interface IProjectData {
 
 export const DATA = {
   HEADER: {
-    NAME: "Hoàng Cao Thống",
+    NAME: "Hoang Cao Thong",
     AGE: "16",
     PRONOUN: "he/him",
     HEADLINE:
-      "Lập trình viên trẻ với tham vọng xây dựng thương hiệu cá nhân và tự do tài chính.",
+      "16yo Vietnamese dev • Building in public on X • Student → Tech Entrepreneur",
     RESUME: "https://caothong.is-a.dev",
     EMAIL: "mailto:caothongdev@gmail.com",
     GITHUB: "https://github.com/caothong",
     LINKEDIN: "https://www.linkedin.com/in/caothongdev",
     YOUTUBE: "https://youtube.com/@caothongdev",
+    X: "https://x.com/caothongdev",
     TIKTOK: "https://tiktok.com/@caothongdev",
     FACEBOOK: "https://facebook.com/caothongdev",
     INSTAGRAM: "https://instagram.com/caothongdev",
@@ -31,22 +32,22 @@ export const DATA = {
 
   ABOUT_ME: {
     INTRO:
-      "Xin chào! Tôi là Hoàng Cao Thống, 16 tuổi, đến từ Hậu Giang & Cần Thơ. Tôi là một lập trình viên trẻ với quyết tâm và tham vọng lớn trong việc xây dựng thương hiệu cá nhân thông qua lập trình và kinh doanh.",
+      "Hello! I'm Hoang Cao Thong, 16 years old, from Can Tho, Vietnam. I'm a young developer focused on building audience X and sharing my journey of building in public.",
     EXPERTISE:
-      "Tôi chuyên về xây dựng website, tools và quan tâm đến System Design, Product Thinking, Business Logic. Mục tiêu của tôi là trở thành entrepreneur technology và đạt được tự do tài chính từ sớm.",
-    BLOG: "Tôi dự định xây dựng kênh YouTube dạy lập trình Python cho học sinh, sinh viên và những người muốn kiếm tiền từ lập trình.",
+      "I specialize in building websites, tools, and am interested in System Design, Product Thinking, and Business Logic. My goal is to grow audience X and document my progress openly.",
+    BLOG: "I plan to build a YouTube channel teaching Python programming and sharing my build in public journey.",
   },
 
   EXPERIENCE: {
     "Freelance Developer": {
       WEBSITE: "https://caothong.is-a.dev",
-      POSITION: "Lập trình viên tự do",
-      LOCATION: "Cần Thơ, Việt Nam",
+      POSITION: "Freelance Developer",
+      LOCATION: "Can Tho, Vietnam",
       DURATION: "2025 - Present",
       DESCRIPTION: [
-        "Xây dựng website và cung cấp dịch vụ cho khách hàng.",
-        "Tạo ra các tools và ứng dụng web hỗ trợ học tập.",
-        "Nghiên cứu và áp dụng System Design, Security trong các dự án.",
+        "Building websites and providing services for clients.",
+        "Creating tools and web applications to support learning.",
+        "Researching and applying System Design and Security in projects.",
       ],
       TECH_STACK: [
         "Python",
@@ -61,20 +62,22 @@ export const DATA = {
       ],
     },
     "Content Creator": {
-      WEBSITE: "https://youtube.com/@caothongdev",
-      POSITION: "Nhà sáng tạo nội dung",
-      LOCATION: "Cần Thơ, Việt Nam",
+      WEBSITE: "https://x.com/caothongdev",
+      POSITION: "Content Creator",
+      LOCATION: "Can Tho, Vietnam",
       DURATION: "2025 - Present",
       DESCRIPTION: [
-        "Chia sẻ kiến thức về lập trình, kinh doanh và marketing.",
-        "Xây dựng thương hiệu cá nhân trong lĩnh vực công nghệ.",
-        "Xây dựng cộng đồng developer trẻ và kết nối những người có chung đam mê công nghệ, kinh doanh.",
+        "Sharing knowledge about programming, business, and marketing.",
+        "Building audience X in the technology field.",
+        "Building a young developer community and connecting people with shared passion for technology and business.",
+        "Documenting my build in public journey.",
       ],
       TECH_STACK: [
         "Content Creation",
         "Video Editing",
         "Marketing",
         "Personal Branding",
+        "Build in Public",
       ],
     },
   },
@@ -83,10 +86,11 @@ export const DATA = {
     "Portfolio Website": {
       GITHUB: "https://github.com/caothongdev/portfolio",
       DESCRIPTION: [
-        "Website portfolio cá nhân được thiết kế responsive với giao diện hiện đại và trải nghiệm người dùng tối ưu.",
-        "Xây dựng bằng Next.js 15 với TypeScript, tích hợp Tailwind CSS cho styling nhanh chóng và nhất quán.",
-        "Sử dụng Framer Motion để tạo animations mượt mà và chuyển động tự nhiên.",
-        "Tối ưu SEO, hỗ trợ dark/light mode và mobile-first design cho mọi thiết bị.",
+        "Personal portfolio website designed with responsive layout, modern interface, and optimized user experience.",
+        "Built with Next.js 15 and TypeScript, integrated with Tailwind CSS for fast and consistent styling.",
+        "Using Framer Motion to create smooth animations and natural transitions.",
+        "SEO optimized, supporting dark/light mode and mobile-first design for all devices.",
+        "Showcasing my build in public journey and audience X growth.",
       ],
       TECH_STACK: [
         "Next.js 15",
@@ -96,30 +100,31 @@ export const DATA = {
         "Lucide React",
         "ShadCN UI",
         "Responsive Design",
+        "Build in Public",
       ],
       IMAGE: portfolio,
     },
   },
 
   BLOGS: {
-    "Hành trình lập trình của một developer 16 tuổi": {
-      DATE: "Sắp ra mắt",
+    "Programming Journey of a 16-Year-Old Developer": {
+      DATE: "Coming Soon",
       TIME: "5",
-      LINK: "https://caothong.is-a.dev/blog/hanh-trinh-lap-trinh",
+      LINK: "https://caothong.is-a.dev/blog/programming-journey",
       DESCRIPTION:
-        "Chia sẻ câu chuyện cá nhân về hành trình học lập trình từ sớm, những khó khăn gặp phải và cách vượt qua. Bài viết sẽ truyền cảm hứng cho các bạn trẻ muốn bắt đầu sự nghiệp lập trình từ tuổi học sinh.",
+        "Sharing my personal story about starting programming early, challenges faced, and how to overcome them. This post will inspire young people who want to start a programming career from student age.",
     },
-    "Tư duy kinh doanh trong lập trình: Marketing + Code = Success": {
-      DATE: "Ý tưởng",
+    "Build in Public: Growing Audience X as a Young Developer": {
+      DATE: "Idea",
       TIME: "6",
-      LINK: "https://caothong.is-a.dev/blog/tu-duy-kinh-doanh",
+      LINK: "https://caothong.is-a.dev/blog/build-in-public",
       DESCRIPTION:
-        "Khám phá cách kết hợp kỹ năng lập trình với tư duy kinh doanh để tạo ra những sản phẩm có thể bán được. Từ việc nghiên cứu thị trường đến product development và customer acquisition.",
+        "Documenting my journey of building in public, sharing progress, failures, and lessons learned while growing audience X.",
     },
   },
 
   SKILLS: {
-    "Ngôn ngữ lập trình": ["Python", "JavaScript", "HTML", "CSS"],
+    "Programming Languages": ["Python", "JavaScript", "HTML", "CSS"],
     "Bot Development": [
       "Discord.py",
       "Bot Framework",
@@ -147,8 +152,9 @@ export const DATA = {
       "Digital Marketing",
       "Content Creation",
       "Personal Branding",
+      "Build in Public",
     ],
-    "Học tập & Phát triển": [
+    "Learning & Development": [
       "System Design",
       "Security",
       "Database Design",
@@ -161,6 +167,7 @@ export const DATA = {
       "Technical Writing",
       "Video Editing",
       "English (Learning - Target: IELTS 7.0)",
+      "Build in Public",
     ],
   },
 };
