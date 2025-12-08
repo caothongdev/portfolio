@@ -145,7 +145,7 @@ function ConnectCard({ option, onClick }: { option: ConnectOption; onClick: () =
     <button
       onClick={onClick}
       className={`
-        w-full p-4 rounded-xl border text-left transition-all hover:scale-[1.02]
+        cursor-target w-full p-4 rounded-xl border text-left transition-all hover:scale-[1.02]
         ${option.highlight 
           ? "border-primary/50 bg-primary/5 hover:bg-primary/10" 
           : "border-white/10 bg-white/5 hover:bg-white/10"

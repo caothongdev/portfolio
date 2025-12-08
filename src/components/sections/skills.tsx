@@ -46,7 +46,7 @@ export function Skills({ data }: { data: Record<string, string[]> }) {
         {SKILL_CARDS.map((card) => (
           <div
             key={card.title}
-            className="group p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all hover:bg-primary/5"
+            className="cursor-target group p-4 rounded-lg border border-border/50 hover:border-primary/30 transition-all hover:bg-primary/5"
           >
             <div className="flex items-center gap-3 mb-2">
               <div className="text-primary/70 group-hover:text-primary transition-colors">
