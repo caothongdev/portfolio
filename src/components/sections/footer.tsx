@@ -17,7 +17,7 @@ export function Footer() {
         className="flex items-center gap-2 w-fit text-muted-foreground text-base cursor-pointer"
         onClick={scrollToTop}
       >
-        Lên đầu trang
+        Go to top
         <ArrowUp size={20} />
       </button>
     </div>

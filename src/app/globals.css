@@ -128,3 +128,9 @@ span,
 li {
   transition: all 1s var(--elastic-out);
 }
+
+/* Hide pointer cursor on interactive elements when custom cursor is active */
+.cursor-target,
+.cursor-target * {
+  cursor: none !important;
+}

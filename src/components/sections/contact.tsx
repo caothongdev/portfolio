@@ -243,7 +243,7 @@ export function Contact({ data }: { data: Record<string, string> }) {
               key={index}
               href="#"
               onClick={() => handleChange(social.url)}
-              className="p-2 rounded-full text-gray-500 hover:text-white hover:bg-white/10 transition-all"
+              className="cursor-target p-2 rounded-full text-gray-500 hover:text-white hover:bg-white/10 transition-all"
             >
               {social.icon}
             </Link>
