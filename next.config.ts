@@ -74,11 +74,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   
-  // Skip ESLint during build (already checked in CI)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
   // Skip TypeScript errors during build
   typescript: {
     ignoreBuildErrors: false,
