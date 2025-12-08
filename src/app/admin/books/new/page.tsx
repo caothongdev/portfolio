@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import RichTextEditor from '@/components/ui/rich-text-editor';
-import ImageUpload from '@/components/ui/image-upload';
+import { RichTextEditor } from '@/components/ui/rich-text-editor';
+import { ImageUpload } from '@/components/ui/image-upload';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 
