@@ -32,10 +32,10 @@ export const DATA = {
 
   ABOUT_ME: {
     INTRO:
-      "Hello! I'm Hoang Cao Thong, 16 years old, from Can Tho, Vietnam. I'm a young developer focused on building audience X and sharing my journey of building in public.",
+      "Hello! I'm Hoang Cao Thong, 16 years old, from Can Tho, Vietnam. I'm a young developer building in public on X and LinkedIn, sharing my journey, lessons learned, and creating value for the community.",
     EXPERTISE:
-      "I specialize in building websites, tools, and am interested in System Design, Product Thinking, and Business Logic. My goal is to grow audience X and document my progress openly.",
-    BLOG: "I plan to build a YouTube channel teaching Python programming and sharing my build in public journey.",
+      "I specialize in building websites, tools, and am passionate about System Design, Product Thinking, and Business Logic. My mission is to document my growth journey and share the most valuable insights I've learned with others.",
+    BLOG: "I share my experiences, lessons learned from building projects, and valuable insights that can help others on their journey. Every post is about real problems, real solutions, and real growth.",
   },
 
   EXPERIENCE: {
